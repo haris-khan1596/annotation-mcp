@@ -66,14 +66,14 @@
 
 ### Implementation for User Story 1
 
-- [ ] T019 [P] [US1] Create SessionManager class with in-memory Map storage in src/session/session-manager.ts
-- [ ] T020 [P] [US1] Create session validation helper in src/session/session-validator.ts
-- [ ] T021 [US1] Implement SessionManager.create() with config validation and duplicate chunk_id detection in src/session/session-manager.ts
-- [ ] T022 [US1] Implement SessionManager.get() with Result pattern in src/session/session-manager.ts
-- [ ] T023 [US1] Create start_session MCP tool handler in src/mcp/tools/start-session.ts
-- [ ] T024 [US1] Convert Zod schemas to JSON Schema for start_session inputSchema in src/mcp/tools/start-session.ts
-- [ ] T025 [US1] Implement MCP error response formatting for session errors in src/mcp/tools/start-session.ts
-- [ ] T026 [US1] Add structured logging for session creation in src/mcp/tools/start-session.ts
+- [X] T019 [P] [US1] Create SessionManager class with in-memory Map storage in src/session/session-manager.ts
+- [X] T020 [P] [US1] Create session validation helper in src/session/session-validator.ts
+- [X] T021 [US1] Implement SessionManager.create() with config validation and duplicate chunk_id detection in src/session/session-manager.ts
+- [X] T022 [US1] Implement SessionManager.get() with Result pattern in src/session/session-manager.ts
+- [X] T023 [US1] Create start_session MCP tool handler in src/mcp/tools/start-session.ts
+- [X] T024 [US1] Convert Zod schemas to JSON Schema for start_session inputSchema in src/mcp/tools/start-session.ts
+- [X] T025 [US1] Implement MCP error response formatting for session errors in src/mcp/tools/start-session.ts
+- [X] T026 [US1] Add structured logging for session creation in src/mcp/tools/start-session.ts
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
