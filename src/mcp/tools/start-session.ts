@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import { zodToJsonSchema } from 'zod-to-json-schema';
 import { ConfigFileSchema } from '../../types/config.types.js';
 import { sessionManager } from '../../session/session-manager.js';
 import { createLogger } from '../../utils/logger.js';
+import { toJsonSchema } from '../../utils/schema-helpers.js';
 
 const logger = createLogger('start-session');
 
@@ -17,7 +17,7 @@ export type StartSessionInput = z.infer<typeof StartSessionInputSchema>;
 export const startSessionToolDefinition = {
   name: 'start_session',
   description: 'Initialize a new annotation session with a config file containing document chunks',
-  inputSchema: zodToJsonSchema(StartSessionInputSchema, 'StartSessionInput'),
+  inputSchema: toJsonSchema(StartSessionInputSchema, 'StartSessionInput'),
 };
 
 // Tool handler

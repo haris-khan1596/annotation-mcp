@@ -1,5 +1,4 @@
 import { randomUUID } from 'node:crypto';
-import type { ConfigFile } from '../types/config.types.js';
 import { ConfigFileSchema } from '../types/config.types.js';
 import type { Session, SessionCreatedResponse, ProgressResponse } from '../types/session.types.js';
 import type { ChunkAnnotation } from '../types/annotation.types.js';
