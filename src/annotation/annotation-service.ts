@@ -22,13 +22,13 @@ const logger = createLogger('annotation-service');
 export interface AnnotateChunkInput {
   sessionId: string;
   chunkId: string;
-  categories?: string[];
-  labels?: string[];
-  subtypes?: Record<string, string>;
-  keywords?: string[];
-  tags?: string[];
-  notes?: string;
-  summary?: string;
+  categories?: string[] | undefined;
+  labels?: string[] | undefined;
+  subtypes?: Record<string, string> | undefined;
+  keywords?: string[] | undefined;
+  tags?: string[] | undefined;
+  notes?: string | undefined;
+  summary?: string | undefined;
 }
 
 /**

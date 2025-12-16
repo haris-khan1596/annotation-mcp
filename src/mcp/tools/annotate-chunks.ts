@@ -71,16 +71,16 @@ export function handleAnnotateChunks(args: unknown): {
 
   const input = parseResult.data;
 
-  // Process batch annotations
+  // Process batch annotations - convert typed arrays to string arrays for service
   const result = batchProcessor.annotateChunks({
     sessionId: input.sessionId,
     annotations: input.annotations.map((a) => ({
       chunkId: a.chunkId,
-      categories: a.categories,
-      labels: a.labels,
-      subtypes: a.subtypes as Record<string, string> | undefined,
-      keywords: a.keywords,
-      tags: a.tags,
+      categories: a.categories ? [...a.categories] : undefined,
+      labels: a.labels ? [...a.labels] : undefined,
+      subtypes: a.subtypes ? Object.fromEntries(Object.entries(a.subtypes)) : undefined,
+      keywords: a.keywords ? [...a.keywords] : undefined,
+      tags: a.tags ? [...a.tags] : undefined,
       notes: a.notes,
       summary: a.summary,
     })),
@@ -92,6 +92,11 @@ export function handleAnnotateChunks(args: unknown): {
   }
 
   // Batch processor always succeeds (partial success semantics)
+  // Since Result<T, never> always has success: true, we can safely access data
+  if (!result.success) {
+    // This should never happen with Result<T, never>
+    throw new Error('Unexpected batch processor failure');
+  }
   const data = result.data;
   logger.info(
     { sessionId: input.sessionId, successCount: data.successCount, errorCount: data.errorCount },

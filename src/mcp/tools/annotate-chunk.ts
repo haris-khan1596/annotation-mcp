@@ -66,15 +66,17 @@ export function handleAnnotateChunk(args: unknown): {
 
   const input = parseResult.data;
 
-  // Annotate the chunk
+  // Annotate the chunk - convert typed arrays to string arrays for service
   const result = annotationService.annotateChunk({
     sessionId: input.sessionId,
     chunkId: input.chunkId,
-    categories: input.categories,
-    labels: input.labels,
-    subtypes: input.subtypes as Record<string, string> | undefined,
-    keywords: input.keywords,
-    tags: input.tags,
+    categories: input.categories ? [...input.categories] : undefined,
+    labels: input.labels ? [...input.labels] : undefined,
+    subtypes: input.subtypes
+      ? Object.fromEntries(Object.entries(input.subtypes))
+      : undefined,
+    keywords: input.keywords ? [...input.keywords] : undefined,
+    tags: input.tags ? [...input.tags] : undefined,
     notes: input.notes,
     summary: input.summary,
   });
