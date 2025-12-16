@@ -1,5 +1,12 @@
 import type { Session } from '../types/session.types.js';
-import type { ChunkAnnotation, Category, Label, Subtype } from '../types/annotation.types.js';
+import type {
+  ChunkAnnotation,
+  Category,
+  Label,
+  SubtypesRecord,
+  FeeScheduleSubtype,
+  FootnotesSubtype,
+} from '../types/annotation.types.js';
 import type { AnnotationError } from '../types/error.types.js';
 import type { Result } from '../types/result.types.js';
 import { success, failure } from '../types/result.types.js';
@@ -84,7 +91,8 @@ class AnnotationService {
     }
 
     // Validate subtypes and ensure they match their categories
-    const validatedSubtypes: Partial<Record<Category, Subtype>> = {};
+    // Build a properly typed SubtypesRecord
+    const validatedSubtypes: SubtypesRecord = {};
     if (input.subtypes) {
       for (const [category, subtype] of Object.entries(input.subtypes)) {
         // First validate the category
@@ -109,7 +117,12 @@ class AnnotationService {
           return subtypeResult;
         }
 
-        validatedSubtypes[catResult.data] = subtypeResult.data;
+        // Assign to the correct typed property
+        if (catResult.data === 'fee_schedule') {
+          validatedSubtypes.fee_schedule = subtypeResult.data as FeeScheduleSubtype;
+        } else if (catResult.data === 'footnotes') {
+          validatedSubtypes.footnotes = subtypeResult.data as FootnotesSubtype;
+        }
       }
     }
 

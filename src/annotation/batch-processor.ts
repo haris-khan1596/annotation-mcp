@@ -1,5 +1,4 @@
-import type { ChunkAnnotation, BatchAnnotationResult, AnnotationItemResult } from '../types/annotation.types.js';
-import type { AnnotationError } from '../types/error.types.js';
+import type { BatchAnnotationResult, AnnotationItemResult } from '../types/annotation.types.js';
 import type { Result } from '../types/result.types.js';
 import { success } from '../types/result.types.js';
 import { annotationService, type AnnotateChunkInput } from './annotation-service.js';
