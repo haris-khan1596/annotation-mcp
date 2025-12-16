@@ -26,6 +26,25 @@ export type Subtype = z.infer<typeof SubtypeSchema>;
 export const RelationTypeSchema = z.enum(['dependencies', 'footnotes', 'references']);
 export type RelationType = z.infer<typeof RelationTypeSchema>;
 
+// Subtypes record: partial record where each category can have its valid subtype
+export const SubtypesRecordSchema = z
+  .object({
+    fee_schedule: FeeScheduleSubtypeSchema.optional(),
+    footnotes: FootnotesSubtypeSchema.optional(),
+  })
+  .partial();
+export type SubtypesRecord = z.infer<typeof SubtypesRecordSchema>;
+
+// Relations record: partial record where each relation type maps to an array of chunk IDs
+export const RelationsRecordSchema = z
+  .object({
+    dependencies: z.array(z.string()).optional(),
+    footnotes: z.array(z.string()).optional(),
+    references: z.array(z.string()).optional(),
+  })
+  .partial();
+export type RelationsRecord = z.infer<typeof RelationsRecordSchema>;
+
 // Chunk Annotation Schema
 
 export const ChunkAnnotationSchema = z.object({
@@ -33,10 +52,10 @@ export const ChunkAnnotationSchema = z.object({
   position: z.number().int().nonnegative(),
   categories: z.array(CategorySchema).default([]),
   labels: z.array(LabelSchema).default([]),
-  subtypes: z.record(CategorySchema, SubtypeSchema).default({}),
+  subtypes: SubtypesRecordSchema.default({}),
   keywords: z.array(z.string()).default([]),
   tags: z.array(z.string()).default([]),
-  relations: z.record(RelationTypeSchema, z.array(z.string())).default({}),
+  relations: RelationsRecordSchema.default({}),
   notes: z.string().default(''),
   summary: z.string().default(''),
 });
