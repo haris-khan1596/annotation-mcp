@@ -24,14 +24,14 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Initialize Node.js project with TypeScript 5.3+ configuration in package.json
-- [ ] T002 [P] Configure tsconfig.json with strict mode and target ES2022
-- [ ] T003 [P] Install dependencies: @modelcontextprotocol/sdk, zod, pino, zod-to-json-schema
-- [ ] T004 [P] Install dev dependencies: typescript, vitest, @types/node
-- [ ] T005 [P] Create src/ directory structure per plan.md (types/, session/, annotation/, validation/, mcp/, utils/)
-- [ ] T006 [P] Create .gitignore with node_modules, dist/, .env
-- [ ] T007 [P] Configure ESLint and Prettier for TypeScript
-- [ ] T008 [P] Setup build scripts in package.json (build, dev, test)
+- [X] T001 Initialize Node.js project with TypeScript 5.3+ configuration in package.json
+- [X] T002 [P] Configure tsconfig.json with strict mode and target ES2022
+- [X] T003 [P] Install dependencies: @modelcontextprotocol/sdk, zod, pino, zod-to-json-schema
+- [X] T004 [P] Install dev dependencies: typescript, vitest, @types/node
+- [X] T005 [P] Create src/ directory structure per plan.md (types/, session/, annotation/, validation/, mcp/, utils/)
+- [X] T006 [P] Create .gitignore with node_modules, dist/, .env
+- [X] T007 [P] Configure ESLint and Prettier for TypeScript
+- [X] T008 [P] Setup build scripts in package.json (build, dev, test)
 
 **Checkpoint**: Basic project scaffolding complete
 
@@ -43,16 +43,16 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T009 Create Literal type schemas (Category, Label, Subtype, RelationType) in src/types/annotation.types.ts
-- [ ] T010 [P] Create Result type definitions (Success, Failure, Result) in src/types/result.types.ts
-- [ ] T011 [P] Create error type discriminated unions (SessionError, AnnotationError, RelationError) in src/types/error.types.ts
-- [ ] T012 [P] Create ConfigChunkSchema and ConfigFileSchema in src/types/config.types.ts
-- [ ] T013 [P] Create ChunkAnnotationSchema and AnnotationExportSchema in src/types/annotation.types.ts
-- [ ] T014 [P] Create SessionSchema and SessionStateSchema in src/types/session.types.ts
-- [ ] T015 Create Zod schema consolidation file in src/validation/schemas.ts
-- [ ] T016 [P] Implement category-subtype validation function in src/validation/literal-validators.ts
-- [ ] T017 [P] Create Pino logger configuration in src/utils/logger.ts
-- [ ] T018 [P] Create BatchAnnotationResultSchema in src/types/annotation.types.ts
+- [X] T009 Create Literal type schemas (Category, Label, Subtype, RelationType) in src/types/annotation.types.ts
+- [X] T010 [P] Create Result type definitions (Success, Failure, Result) in src/types/result.types.ts
+- [X] T011 [P] Create error type discriminated unions (SessionError, AnnotationError, RelationError) in src/types/error.types.ts
+- [X] T012 [P] Create ConfigChunkSchema and ConfigFileSchema in src/types/config.types.ts
+- [X] T013 [P] Create ChunkAnnotationSchema and AnnotationExportSchema in src/types/annotation.types.ts
+- [X] T014 [P] Create SessionSchema and SessionStateSchema in src/types/session.types.ts
+- [X] T015 Create Zod schema consolidation file in src/validation/schemas.ts
+- [X] T016 [P] Implement category-subtype validation function in src/validation/literal-validators.ts
+- [X] T017 [P] Create Pino logger configuration in src/utils/logger.ts
+- [X] T018 [P] Create BatchAnnotationResultSchema in src/types/annotation.types.ts
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
