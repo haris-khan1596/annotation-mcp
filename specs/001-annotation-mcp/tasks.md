@@ -87,17 +87,17 @@
 
 ### Implementation for User Story 2
 
-- [ ] T027 [P] [US2] Create AnnotationService class in src/annotation/annotation-service.ts
-- [ ] T028 [US2] Implement AnnotationService.annotateChunk() with Literal validation in src/annotation/annotation-service.ts
-- [ ] T029 [US2] Implement category-subtype matching validation in src/annotation/annotation-service.ts
-- [ ] T030 [US2] Implement duplicate annotation update logic (not insert) in src/annotation/annotation-service.ts
-- [ ] T031 [P] [US2] Create BatchProcessor class in src/annotation/batch-processor.ts
-- [ ] T032 [US2] Implement BatchProcessor.annotateChunks() with partial success semantics in src/annotation/batch-processor.ts
-- [ ] T033 [US2] Implement per-chunk success/error aggregation in src/annotation/batch-processor.ts
-- [ ] T034 [US2] Create annotate_chunk MCP tool handler in src/mcp/tools/annotate-chunk.ts
-- [ ] T035 [US2] Create annotate_chunks MCP tool handler in src/mcp/tools/annotate-chunks.ts
-- [ ] T036 [US2] Convert annotation schemas to JSON Schema for tool inputSchemas in src/mcp/tools/annotate-chunk.ts
-- [ ] T037 [US2] Add structured logging for annotation operations in src/mcp/tools/annotate-chunk.ts and src/mcp/tools/annotate-chunks.ts
+- [X] T027 [P] [US2] Create AnnotationService class in src/annotation/annotation-service.ts
+- [X] T028 [US2] Implement AnnotationService.annotateChunk() with Literal validation in src/annotation/annotation-service.ts
+- [X] T029 [US2] Implement category-subtype matching validation in src/annotation/annotation-service.ts
+- [X] T030 [US2] Implement duplicate annotation update logic (not insert) in src/annotation/annotation-service.ts
+- [X] T031 [P] [US2] Create BatchProcessor class in src/annotation/batch-processor.ts
+- [X] T032 [US2] Implement BatchProcessor.annotateChunks() with partial success semantics in src/annotation/batch-processor.ts
+- [X] T033 [US2] Implement per-chunk success/error aggregation in src/annotation/batch-processor.ts
+- [X] T034 [US2] Create annotate_chunk MCP tool handler in src/mcp/tools/annotate-chunk.ts
+- [X] T035 [US2] Create annotate_chunks MCP tool handler in src/mcp/tools/annotate-chunks.ts
+- [X] T036 [US2] Convert annotation schemas to JSON Schema for tool inputSchemas in src/mcp/tools/annotate-chunk.ts
+- [X] T037 [US2] Add structured logging for annotation operations in src/mcp/tools/annotate-chunk.ts and src/mcp/tools/annotate-chunks.ts
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -111,12 +111,12 @@
 
 ### Implementation for User Story 4
 
-- [ ] T038 [P] [US4] Create export service in src/annotation/annotation-service.ts
-- [ ] T039 [US4] Implement AnnotationService.exportAnnotations() with schema validation in src/annotation/annotation-service.ts
-- [ ] T040 [US4] Implement handling of un-annotated chunks (marked as pending) in src/annotation/annotation-service.ts
-- [ ] T041 [US4] Create export_annotations MCP tool handler in src/mcp/tools/export-annotations.ts
-- [ ] T042 [US4] Convert export schema to JSON Schema for tool inputSchema in src/mcp/tools/export-annotations.ts
-- [ ] T043 [US4] Add structured logging for export operations in src/mcp/tools/export-annotations.ts
+- [X] T038 [P] [US4] Create export service in src/annotation/annotation-service.ts
+- [X] T039 [US4] Implement AnnotationService.exportAnnotations() with schema validation in src/annotation/annotation-service.ts
+- [X] T040 [US4] Implement handling of un-annotated chunks (marked as pending) in src/annotation/annotation-service.ts
+- [X] T041 [US4] Create export_annotations MCP tool handler in src/mcp/tools/export-annotations.ts
+- [X] T042 [US4] Convert export schema to JSON Schema for tool inputSchema in src/mcp/tools/export-annotations.ts
+- [X] T043 [US4] Add structured logging for export operations in src/mcp/tools/export-annotations.ts
 
 **Checkpoint**: At this point, User Stories 1, 2, AND 4 form a complete annotation workflow (MVP)
 
@@ -130,12 +130,12 @@
 
 ### Implementation for User Story 3
 
-- [ ] T044 [P] [US3] Create RelationManager class in src/annotation/relation-manager.ts
-- [ ] T045 [US3] Implement RelationManager.addRelation() with target existence validation in src/annotation/relation-manager.ts
-- [ ] T046 [US3] Implement RelationManager.validateRelationType() with Literal check in src/annotation/relation-manager.ts
-- [ ] T047 [US3] Create add_relation MCP tool handler in src/mcp/tools/add-relation.ts
-- [ ] T048 [US3] Convert relation schemas to JSON Schema for tool inputSchema in src/mcp/tools/add-relation.ts
-- [ ] T049 [US3] Add structured logging for relation operations in src/mcp/tools/add-relation.ts
+- [X] T044 [P] [US3] Create RelationManager class in src/annotation/relation-manager.ts
+- [X] T045 [US3] Implement RelationManager.addRelation() with target existence validation in src/annotation/relation-manager.ts
+- [X] T046 [US3] Implement RelationManager.validateRelationType() with Literal check in src/annotation/relation-manager.ts
+- [X] T047 [US3] Create add_relation MCP tool handler in src/mcp/tools/add-relation.ts
+- [X] T048 [US3] Convert relation schemas to JSON Schema for tool inputSchema in src/mcp/tools/add-relation.ts
+- [X] T049 [US3] Add structured logging for relation operations in src/mcp/tools/add-relation.ts
 
 **Checkpoint**: All user stories 1-4 plus relations should now be independently functional
 
