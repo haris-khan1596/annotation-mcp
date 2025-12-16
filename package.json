@@ -17,10 +17,20 @@
     "lint": "eslint src/",
     "format": "prettier --write 'src/**/*.ts'"
   },
-  "keywords": ["mcp", "annotation", "llm"],
+  "keywords": [
+    "mcp",
+    "annotation",
+    "llm"
+  ],
   "author": "",
   "license": "ISC",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "pino": "^10.1.0",
+    "zod": "^4.2.1",
+    "zod-to-json-schema": "^3.25.0"
   }
 }
