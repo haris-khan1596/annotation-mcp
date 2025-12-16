@@ -149,12 +149,12 @@
 
 ### Implementation for User Story 5
 
-- [ ] T050 [P] [US5] Create progress tracker in src/session/session-manager.ts
-- [ ] T051 [US5] Implement SessionManager.getProgress() with completion statistics in src/session/session-manager.ts
-- [ ] T052 [US5] Implement pending chunk ID collection in src/session/session-manager.ts
-- [ ] T053 [US5] Create get_progress MCP tool handler in src/mcp/tools/get-progress.ts
-- [ ] T054 [US5] Convert progress schemas to JSON Schema for tool inputSchema in src/mcp/tools/get-progress.ts
-- [ ] T055 [US5] Add structured logging for progress queries in src/mcp/tools/get-progress.ts
+- [X] T050 [P] [US5] Create progress tracker in src/session/session-manager.ts
+- [X] T051 [US5] Implement SessionManager.getProgress() with completion statistics in src/session/session-manager.ts
+- [X] T052 [US5] Implement pending chunk ID collection in src/session/session-manager.ts
+- [X] T053 [US5] Create get_progress MCP tool handler in src/mcp/tools/get-progress.ts
+- [X] T054 [US5] Convert progress schemas to JSON Schema for tool inputSchema in src/mcp/tools/get-progress.ts
+- [X] T055 [US5] Add structured logging for progress queries in src/mcp/tools/get-progress.ts
 
 **Checkpoint**: All user stories should now be independently functional
 
