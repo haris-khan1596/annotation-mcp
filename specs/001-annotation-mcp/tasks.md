@@ -164,13 +164,13 @@
 
 **Purpose**: Wire all tools into MCP server with protocol compliance
 
-- [ ] T056 Create MCP Server instance with stdio transport in src/mcp/server.ts
-- [ ] T057 Register all 6 tool handlers (start_session, annotate_chunk, annotate_chunks, add_relation, get_progress, export_annotations) in src/mcp/server.ts
-- [ ] T058 Implement ListToolsRequestSchema handler with all tool definitions in src/mcp/server.ts
-- [ ] T059 Implement CallToolRequestSchema handler with tool routing in src/mcp/server.ts
-- [ ] T060 Add global error handling for unknown tools in src/mcp/server.ts
-- [ ] T061 Create main entry point in src/index.ts that starts MCP server
-- [ ] T062 Add server startup logging and graceful shutdown in src/index.ts
+- [X] T056 Create MCP Server instance with stdio transport in src/mcp/server.ts
+- [X] T057 Register all 6 tool handlers (start_session, annotate_chunk, annotate_chunks, add_relation, get_progress, export_annotations) in src/mcp/server.ts
+- [X] T058 Implement ListToolsRequestSchema handler with all tool definitions in src/mcp/server.ts
+- [X] T059 Implement CallToolRequestSchema handler with tool routing in src/mcp/server.ts
+- [X] T060 Add global error handling for unknown tools in src/mcp/server.ts
+- [X] T061 Create main entry point in src/index.ts that starts MCP server
+- [X] T062 Add server startup logging and graceful shutdown in src/index.ts
 
 **Checkpoint**: MCP server fully functional with all user stories integrated
 
