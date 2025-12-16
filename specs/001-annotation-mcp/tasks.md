@@ -180,14 +180,14 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T063 [P] Create README.md with setup and usage instructions
-- [ ] T064 [P] Add inline JSDoc comments for all public APIs
-- [ ] T065 [P] Verify all error messages are actionable for LLMs (include validOptions in errors)
-- [ ] T066 [P] Add performance timing logs for operations >100ms
-- [ ] T067 Code cleanup: remove any unused imports and console.logs
-- [ ] T068 Verify strict TypeScript compliance (no `any` without justification)
-- [ ] T069 Add examples directory with sample config file and workflow
-- [ ] T070 Run quickstart.md validation manually (test end-to-end workflow)
+- [X] T063 [P] Create README.md with setup and usage instructions
+- [X] T064 [P] Add inline JSDoc comments for all public APIs
+- [X] T065 [P] Verify all error messages are actionable for LLMs (include validOptions in errors)
+- [X] T066 [P] Add performance timing logs for operations >100ms
+- [X] T067 Code cleanup: remove any unused imports and console.logs
+- [X] T068 Verify strict TypeScript compliance (no `any` without justification)
+- [X] T069 Add examples directory with sample config file and workflow
+- [X] T070 Run quickstart.md validation manually (test end-to-end workflow)
 
 ---
 

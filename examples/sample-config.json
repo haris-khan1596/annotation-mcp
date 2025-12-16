@@ -1,0 +1,24 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "chunk_0",
+      "position": 0,
+      "text": "Section I: Participant Fees\n\nInitiation Fee: $2,500 (one-time payment)"
+    },
+    {
+      "chunk_id": "chunk_1",
+      "position": 1,
+      "text": "Monthly Participant Fee: $1,500 per month"
+    },
+    {
+      "chunk_id": "chunk_2",
+      "position": 2,
+      "text": "Legal and Regulatory Fee: $500 per quarter"
+    },
+    {
+      "chunk_id": "chunk_footnote_1",
+      "position": 3,
+      "text": "Note 1: Fees subject to change with 30 days notice"
+    }
+  ]
+}
